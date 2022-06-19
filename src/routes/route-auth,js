@@ -1,0 +1,9 @@
+const router = require('express').Router();
+const { auth } = require('../controllers');
+
+router.get('/login', auth.login);
+router.get('/register', auth.register);
+router.get('/token', auth.refreshToken);
+router.get('/delRefreshToken', auth.deleteToken);
+
+module.exports = router;
